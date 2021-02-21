@@ -1,8 +1,7 @@
-h1 Hello CodersX 111
-a(href="/todos") See todos list
+h1 Todo list
 form(action="todos", method="GET")
     input(type="text", placehoder="Search Name", autocomplete="on", name="q")
     button Search
-ul
-    each todo in todos
+ul 
+    each todo in todos 
         li= todo.name
