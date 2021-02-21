@@ -14,17 +14,19 @@ var todos =[
 ];
 
 app.get ('/', function(request,response){
-    response.send('<h1>Hello Coders.Tokyo</h1>')});
+    response.render('index.pug')});
 
 
 app.get ('/todos',function (request,response){
     console.log(request.query);
     var q =request.query.q;
+
     var matchedTodos =todos.filter(function (todo){
-            return todo.name.toLocaleLowerCase().indexOf(q.toLocaleLowerCase()) !==-1;
+        return todo.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
         });
     response.render('todos/index.pug',{
-        todos:matchedTodos
+        todos:matchedTodos,
+        queryInput:q
     });
 });
 app.listen (port,function(){
