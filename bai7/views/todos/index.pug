@@ -1,0 +1,11 @@
+h1 TodoList
+a(href="/todos/create") Creat new todo into todo List
+form(action='todos' method='GET')
+  input(type='text',name ='q')
+  button Search
+ul
+  each todo in todos
+    li
+      span= todo.text
+      span &nbsp
+      a(href="/todos/"+ todo.id +"/delete") Xoá
