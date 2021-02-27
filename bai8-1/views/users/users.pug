@@ -1,0 +1,13 @@
+h1 My users
+
+ul
+  each user in users
+    li=user.name +user.age
+      a(href="/users/delete/"+ user.id, , style="margin-left:5px; text-decoration: none; color: blue; ")
+        label(style="cursor: pointer;") Delete
+      a(href="/users/detail/"+ user.id , style="margin-left:5px; text-decoration: none; color: red; " )
+        label(style="cursor: pointer;") View
+      a(href="/users/update/"+ user.id , style="margin-left:5px; text-decoration: none; color: green; " )
+        label(style="cursor: pointer;") Update
+    
+a(href="/users/add") Add new user

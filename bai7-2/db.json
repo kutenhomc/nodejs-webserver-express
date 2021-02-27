@@ -1,3 +1,8 @@
 {
-  "books": [{ "name": "test1", "description": "testbook1" }]
+  "books": [
+    {
+      "name": "test1",
+      "description": "testbook1"
+    }
+  ]
 }

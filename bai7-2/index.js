@@ -56,6 +56,7 @@ app.get("/books/search", function(request, response) {
 });
 //đã xong phần search name of book
 
+//add books
 app.get("/books/create", function(request, response) {
   response.render("books/create");
 });
@@ -66,6 +67,8 @@ app.post("/books/create", function(request, response) {
   response.redirect("/books");
 });
 
+
+// delete books
 app.get('/books/:id/delete',function(request,response){
     var id =request.params.id;
   console.log(id);
@@ -74,6 +77,8 @@ app.get('/books/:id/delete',function(request,response){
   response.redirect("/books");
 });
 
+
+// run application
 app.listen (port,function(){
     console.log('Server listening on port' +port);
 

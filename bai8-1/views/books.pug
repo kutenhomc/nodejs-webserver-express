@@ -1,0 +1,13 @@
+h1 My books
+
+ol
+  each book in books
+    li= book.title
+      a(href="/books/delete/"+ book.id, , style="margin-left:5px; text-decoration: none; color: blue; ")
+        label(style="cursor: pointer;") Delete
+      a(href="/books/detail/"+ book.id , style="margin-left:5px; text-decoration: none; color: red; " )
+        label(style="cursor: pointer;") View
+      a(href="/books/update/"+ book.id , style="margin-left:5px; text-decoration: none; color: green; " )
+        label(style="cursor: pointer;") Update
+    
+a(href="/books/add") Add new book
